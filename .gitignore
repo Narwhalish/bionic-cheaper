@@ -1,4 +1,3 @@
-
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
@@ -10,3 +9,7 @@ pyproject.toml
 
 # Pyenv
 .python-version
+
+# Miscellaneous
+.DS_Store
+__pycache__
