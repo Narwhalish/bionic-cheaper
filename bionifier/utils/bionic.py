@@ -18,7 +18,7 @@ class BionicCheaper:
         return tuple((bc.og_text, bc.bc_text))
 
     def __init__(self, og_text, left=Color.BOLD.value, right=Color.END.value):
-        self._og_text = og_text
+        self._og_text = og_text if og_text else BionicCheaper.SAMPLE
         self._left = left
         self._right = right
         self._bc_text = self.bionify()
@@ -29,7 +29,7 @@ class BionicCheaper:
 
     @og_text.setter
     def og_text(self, og_text):
-        self._og_text = og_text
+        self._og_text = og_text if og_text else BionicCheaper.SAMPLE
         self._bc_text = self.bionify()
 
     @property

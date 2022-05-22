@@ -24,19 +24,19 @@
 
 <body>
   <h1>Bionic Cheaper</h1>
-  <form id="bionifier">
+  <form id="bionifier" method="post">
+    {% csrf_token %}
     <div class="row">
-
       <div class="col">
         <label for="input">Input</label>
-        <textarea id="input">{{ input_placeholder }}</textarea>
+        <textarea id="input" name="input">{{ input_text }}</textarea>
+        <input type="submit">
       </div>
 
       <div class="col">
         <label for="output">Output</label>
-        <div id="output">{{ output_placeholder | safe}}</div>
+        <div id="output">{{ output_text | safe}}</div>
       </div>
     </div>
-
   </form>
 </body>

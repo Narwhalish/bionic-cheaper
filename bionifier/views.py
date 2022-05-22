@@ -5,9 +5,11 @@ from bionifier.utils.bionic import BionicCheaper
 # Create your views here.
 def index(request):
     context = {}
-
     bc = BionicCheaper(BionicCheaper.SAMPLE, "<b>", "</b>")
 
-    context["input_placeholder"], context["output_placeholder"] = bc.og_text, bc.bc_text
+    if request.method == "POST":
+        bc.og_text = request.POST.get("input").strip()
+
+    context["input_text"], context["output_text"] = bc.og_text, bc.bc_text
 
     return render(request, "bionifier/index.html", context)
