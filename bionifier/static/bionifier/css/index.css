@@ -12,12 +12,12 @@
 
 .col {
   flex: 1;
-  padding: 1em;
+  padding: 1em 2em 3em 2em;
 }
 
 h1 {
   margin: auto;
-  padding: 1em 0em 0em 1em;
+  padding: 1em 0em 0em 2em;
   font-weight: 900;
   font-style: normal;
 }
