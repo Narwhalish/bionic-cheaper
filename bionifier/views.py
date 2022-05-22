@@ -5,6 +5,9 @@ from bionifier.utils.bionic import BionicCheaper
 # Create your views here.
 def index(request):
     context = {}
-    context["input_placeholder"], context["output_placeholder"] = BionicCheaper.sample()
 
-    return render(request, "index.html", context)
+    bc = BionicCheaper(BionicCheaper.SAMPLE, "<b>", "</b>")
+
+    context["input_placeholder"], context["output_placeholder"] = bc.og_text, bc.bc_text
+
+    return render(request, "bionifier/index.html", context)

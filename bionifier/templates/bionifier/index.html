@@ -1,0 +1,42 @@
+{% load static %}
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'bionifier/css/index.css' %}">
+  <style>
+    @font-face {
+      font-family: "Inter";
+      src: url("{% static 'bionifier/fonts/Inter-Black.ttf' format('truetype')%}");
+      font-weight: 900;
+    }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("{% static 'bionifier/fonts/Inter-SemiBold.ttf' format('truetype')%}");
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("{% static 'bionifier/fonts/Inter-Regular.ttf' format('truetype')%}");
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Bionic Cheaper</h1>
+  <form id="bionifier">
+    <div class="row">
+
+      <div class="col">
+        <label for="input">Input</label>
+        <textarea id="input">{{ input_placeholder }}</textarea>
+      </div>
+
+      <div class="col">
+        <label for="output">Output</label>
+        <div id="output">{{ output_placeholder | safe}}</div>
+      </div>
+    </div>
+
+  </form>
+</body>
