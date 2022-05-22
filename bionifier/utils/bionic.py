@@ -1,12 +1,24 @@
-from color import Color
-import string
+from bionifier.utils.color import Color
+import textwrap
 
 # Edge Case: Does not account for hyphenated phrases.
 
 
 class BionicCheaper:
+    TEXTWRAP_WIDTH = 40
+    SAMPLE = "Bionic Reading is a new method facilitating the reading process by guiding the eyes through text with artificial fixation points. As a result, the reader is only focusing on the highlighted initial letters and lets the brain center complete the word. In a digital word dominated by shallow forms of reading, Bionic Reading aims to encourage a more in-depth reading and understanding of written content."
+
+    @classmethod
+    def _clean_text(cls, text):
+        return "\n".join(textwrap.wrap(text, width=cls.TEXTWRAP_WIDTH))
+
+    @staticmethod
+    def sample():
+        bc = BionicCheaper(BionicCheaper.SAMPLE)
+        return tuple((bc.og_text, bc.debug()))
+
     def __init__(self, og_text):
-        self._og_text = og_text
+        self._og_text = self._clean_text(og_text)
         self._bc_text = self.bionify()
 
     @property

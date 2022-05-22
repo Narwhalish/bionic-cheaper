@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "bryanyao.com",
     "www.bryanyao.com",
+    "localhost",
 ]
 
 

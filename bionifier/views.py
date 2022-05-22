@@ -1,5 +1,10 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+
+from bionifier.utils.bionic import BionicCheaper
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello from bioniccheaper")
+    context = {}
+    context["input_placeholder"], context["output_placeholder"] = BionicCheaper.sample()
+
+    return render(request, "index.html", context)
