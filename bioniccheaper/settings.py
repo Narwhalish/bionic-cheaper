@@ -26,10 +26,8 @@ SECRET_KEY = "django-insecure-=b-oyhcxvfskf06xhn6=fp1zkqkzi_2u2-bgp1fr%py)w9e0qx
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "BionicCheaper-dev.us-west-1.elasticbeanstalk.com",
-    ".localhost",
-    "127.0.0.1",
-    "[::1]",
+    "bryanyao.com",
+    "www.bryanyao.com",
 ]
 
 

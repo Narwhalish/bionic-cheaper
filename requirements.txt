@@ -1,4 +1,5 @@
-asgiref @ file:///Users/bryanyao/Library/Caches/pypoetry/artifacts/c7/eb/03/bdc9b9a0f936a458e93a757d4e793e7cf4a5e5246d585ff019ac44cb94/asgiref-3.5.2-py3-none-any.whl
-backports.zoneinfo @ file:///Users/bryanyao/Library/Caches/pypoetry/artifacts/e6/15/b7/36ac7ee8151b40900b57feb81e951ffce938b928668025c9ca706471c0/backports.zoneinfo-0.2.1.tar.gz
-Django @ file:///Users/bryanyao/Library/Caches/pypoetry/artifacts/5a/a3/f6/fdd25d0abf2fcf1f46d10db5c8273bb421f3855657df3dcfab87825abd/Django-4.0.4-py3-none-any.whl
-sqlparse @ file:///Users/bryanyao/Library/Caches/pypoetry/artifacts/bd/30/d0/940567a036c6ea57abe7098acbd123f8c8985ccc27713365ae80d28f89/sqlparse-0.4.2-py3-none-any.whl
+asgiref==3.5.2; python_version >= "3.8"
+backports.zoneinfo==0.2.1; python_version < "3.9" and python_version >= "3.8"
+django==4.0.4; python_version >= "3.8"
+sqlparse==0.4.2; python_version >= "3.8"
+tzdata==2022.1; sys_platform == "win32" and python_version >= "3.8"
